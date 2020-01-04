@@ -5,7 +5,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>  <p>Pets management</p></span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -52,7 +52,7 @@
         <!-- /top navigation -->
 
         <!-- page content -->
-        <?php $this->load->view($content)?>
+        <!-- <?php $this->load->view($content)?> -->
         <!-- /page content -->
 
 <?php $this->load->view('template/footer')?>
