@@ -7,7 +7,7 @@
                         <h2>Default Example <small>Users</small></h2>
                         <ul class="nav navbar-right panel_toolbox">
                             <li>
-                              <a class="btn btn-primary" href="<?= base_url('asosiasi/form_add');?>">Tambah</a>  
+                              <a class="btn btn-primary" href="<?= base_url('ras/form_add');?>">Tambah</a>  
                             </li>
                         </ul>
                         <div class="clearfix"></div>
@@ -50,8 +50,8 @@
                                                                 style="width: 72px;">No</th>
                                                             <th class="sorting" tabindex="0" aria-controls="datatable"
                                                                 rowspan="1" colspan="1"
-                                                                aria-label="Nama asosiasi: activate to sort column ascending"
-                                                                style="width: 121px;">Nama asosiasi</th>
+                                                                aria-label="Nama ras: activate to sort column ascending"
+                                                                style="width: 121px;">Nama Ras</th>
                                                             <th class="sorting" tabindex="0" aria-controls="datatable"
                                                                 rowspan="1" colspan="1"
                                                                 aria-label="Aksi: activate to sort column ascending"
@@ -61,15 +61,19 @@
 
 
                                                     <tbody>
-                                                        <div class="alert alert-success" role="alert">
-                                                        Selamat, tambah data berhasil :)
+                                                        <div class="alert alert-success alert-dismissible">
+                                                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                                            <strong>Success!</strong> Indicates a successful or positive action.
                                                         </div>
-                                                        <?php $no=1; foreach ($asosiasi as $as) { ?>
+                                                        <!-- <div class="alert alert-success" role="alert">
+                                                        Selamat, tambah data berhasil :)
+                                                        </div> -->
+                                                        <?php $no=1; foreach ($ras as $ra) { ?>
                                                         <tr role="row" class="odd">
                                                             <td class="sorting_1"><?= $no++ ?></td>
-                                                            <td><?= $as->nama ?></td>
+                                                            <td><?= $ra->nama_ras ?></td>
                                                             <td>
-                                                                <a href="<?= base_url('asosiasi/form_update/'.$as->id) ?>">Edit</a> | <a href="<?= base_url('asosiasi/delete/'.$as->id) ?>">Delete</a>
+                                                                <a href="<?= base_url('ras/form_update/'.$ra->id) ?>">Edit</a> | <a href="<?= base_url('ras/delete/'.$ra->id) ?>">Delete</a>
                                                             </td>
                                                         </tr>
                                                         <?php }?>

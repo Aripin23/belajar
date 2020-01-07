@@ -52,7 +52,7 @@
         <!-- /top navigation -->
 
         <!-- page content -->
-        <!-- <?php $this->load->view($content)?> -->
+        <?php $this->load->view($view)?>
         <!-- /page content -->
 
 <?php $this->load->view('template/footer')?>
