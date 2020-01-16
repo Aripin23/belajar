@@ -26,6 +26,7 @@ class KodeEms extends CI_Controller {
         $data['view'] = 'ems/add_ems';
         $this->load->view('template/master', $data);
     }
+
     public function create()
     {
         $ems = $this->input->post('ems');
@@ -63,4 +64,11 @@ class KodeEms extends CI_Controller {
         redirect('kodeEms');
     }
 
+
+    public function delete($id)
+    {
+        $this->ems_model->delete_Data($id);
+        redirect('kodeEms');
+    }
+   
 }
