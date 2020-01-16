@@ -61,9 +61,9 @@
 
 
                                                     <tbody>
-                                                        <div class="alert alert-success" role="alert">
+                                                       <!--  <div class="alert alert-success" role="alert">
                                                         Selamat, tambah data berhasil :)
-                                                        </div>
+                                                        </div> -->
                                                         <?php $no=1; foreach ($asosiasi as $as) { ?>
                                                         <tr role="row" class="odd">
                                                             <td class="sorting_1"><?= $no++ ?></td>
