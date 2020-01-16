@@ -3,46 +3,67 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Kategori extends CI_Controller {
 
-	public function __construct()
+	function __construct()
 	{
 		parent::__construct();
-		$this->load->model('asosiasi_model');
+		$this->load->model('kategori_model');
 		$this->load->helper('url_helper');
-
 	}
 
-	public function index()
+	function index()
+	{
+		$data['kategori'] = $this->kategori_model->get_Data();
+		$data['view'] = 'kategori/index';
+		$this->load->view('template/master', $data);
+	}
+
+	function form_tambah()
+	{
+		$data['view'] = 'kategori/add_kategori';
+		$this->load->view('template/master', $data);
+	}
+
+	public function create()
+	{
+		$nama = $this->input->post('nama');
+		$slug = url_title($nama, 'dash', true);
+
+		$data = array(
+			'nama' => $nama,
+			'slug' => $slug
+		);
+
+		$this->kategori_model->insert_data($data);
+		
+		redirect('kategori');
+		
+	}
+
+	public function form_update($id)
+	{
+		$data['data_id'] = $this->kategori_model->get_id($id);
+		$data['view'] = 'kategori/edit_kategori';
+		$this->load->view('template/master', $data);
+	}
+
+	public function update($id)
+	{
+		$nama = $this->input->post('nama');
+		$slug = url_title($nama, 'dash', true);
+		$data = array(
+			'nama' => $nama,
+			'slug' => $slug
+		);
+		if($nama !=''){
+			$this->kategori_model->update_Data($data, $id);
+		}
+		redirect ('kategori');
+	}
+
+	public function delete($id)
 	{	
-		$data['asosiasi'] = $this->asosiasi_model->get_Data();
-		$this->load->view('asosiasi/index', $data);
-	
-    }
-   
+		$this->kategori_model->delete_Data($id);
+		redirect('kategori');
+	}
+
 }
-
-
-// defined('BASEPATH') OR exit('No direct script access allowed');
-
-// class Kategori extends CI_Controller {
-
-//     public function index()
-//     {
-// 		$this->load->view('welcome_message');
-//     }
-    
-//     public function view($kategori = 'test')
-//     {
-//         if(!file_exists(APPPATH."views/kategori/".$kategori.'.php')){
-//             show_404();
-//         }
-
-//         $data['judul'] = $kategori;
-
-//         $this->load->view('plat/header', $data);
-//         $this->load->view('$kategori/'.$kategori);
-//         $this->load->view('plat/footer');
-
-
-
-//     }
-// } -->
