@@ -7,6 +7,6 @@ class Welcome extends CI_Controller {
 		// $data['content'] = 'kategori';
 		// $this->load->view('template/master',$data);
 		
-		$this->load->view('template/master');
+		// $this->load->view('template/master');
 	}
 }
