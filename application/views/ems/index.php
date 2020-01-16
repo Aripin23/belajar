@@ -61,9 +61,9 @@
 
 
                                                     <tbody>
-                                                        <div class="alert alert-success" role="alert">
+                                                        <!-- <div class="alert alert-success" role="alert">
                                                         Selamat, tambah data berhasil :)
-                                                        </div>
+                                                        </div> -->
                                                         <?php $no=1; foreach ($ems as $em) { ?>
                                                         <tr role="row" class="odd">
                                                             <td class="sorting_1"><?= $no++ ?></td>
@@ -74,7 +74,6 @@
                                                         </tr>
                                                         <?php }?>
                                                     </tbody>
-
 
 
                                                 </table>
