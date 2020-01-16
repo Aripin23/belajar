@@ -1,7 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+$route['kategori'] = 'kategori';
+
+
 $route['ras'] = 'ras';
+$route['kodeEms'] = 'kodeEms';
 
 $route['asosiasi'] = 'asosiasi';
 $route['welcome'] = 'welcome';
