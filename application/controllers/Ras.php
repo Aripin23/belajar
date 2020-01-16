@@ -9,7 +9,7 @@ class Ras extends CI_Controller {
 		$this->load->model('ras_model');
 		$this->load->helper('url_helper');
 	}
-
+	
 	public function index()
 	{
 		$data['ras'] = $this->ras_model->get_Data();
