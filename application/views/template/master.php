@@ -93,9 +93,12 @@
         <!-- end main wrapper  -->
         <!-- ============================================================== -->
         <!-- Optional JavaScript -->
-        <!-- jquery 3.3.1 -->
-        <script src="<?= base_url() ?>assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+
         <!-- bootstap bundle js -->
+
+    <!-- jquery 3.3.1 -->
+    <script src="<?= base_url() ?>assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+
         <script src="<?= base_url() ?>assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
         <!-- slimscroll js -->
         <script src="<?= base_url() ?>assets/vendor/slimscroll/jquery.slimscroll.js"></script>
