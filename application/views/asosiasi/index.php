@@ -38,53 +38,25 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Asosiasi</h5>
                 <a href="#" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </a>
             </div>
             <div class="modal-body">
-                <form id="form" data-parsley-validate="" novalidate="">
+                <form>
                     <div class="form-group row">
-                        <label for="inputEmail2" class="col-3 col-lg-2 col-form-label text-right">Email</label>
+                        <label for="nama" class="col-3 col-lg-2 col-form-label text-right">Nama</label>
                         <div class="col-9 col-lg-10">
-                            <input id="inputEmail2" type="email" required="" data-parsley-type="email"
-                                placeholder="Email" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="inputPassword2" class="col-3 col-lg-2 col-form-label text-right">Password</label>
-                        <div class="col-9 col-lg-10">
-                            <input id="inputPassword2" type="password" required="" placeholder="Password"
-                                class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="inputWebSite" class="col-3 col-lg-2 col-form-label text-right">Web Site</label>
-                        <div class="col-9 col-lg-10">
-                            <input id="inputWebSite" type="url" required="" data-parsley-type="url" placeholder="URL"
-                                class="form-control">
-                        </div>
-                    </div>
-                    <div class="row pt-2 pt-sm-5 mt-1">
-                        <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
-                            <label class="be-checkbox custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input"><span
-                                    class="custom-control-label">Remember me</span>
-                            </label>
-                        </div>
-                        <div class="col-sm-6 pl-0">
-                            <p class="text-right">
-                                <button type="submit" class="btn btn-space btn-primary">Submit</button>
-                                <button class="btn btn-space btn-secondary">Cancel</button>
-                            </p>
+                            <input id="nama" type="text" required="" data-parsley-type="nama"
+                                placeholder="nama" class="form-control">
                         </div>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <a href="#" class="btn btn-secondary" data-dismiss="modal">Close</a>
-                <a href="#" class="btn btn-primary">Save changes</a>
+                <a href="#" class="btn btn-secondary" data-dismiss="modal">Tutup</a>
+                <button type="submit" class="btn btn-primary">Simpan</button>
             </div>
         </div>
     </div>
