@@ -1,26 +1,18 @@
-        <!-- footer content -->
-        <footer>
-          <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-          </div>
-          <div class="clearfix"></div>
-        </footer>
-        <!-- /footer content -->
-      </div>
+<div class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                Copyright © 2018 Concept. All rights reserved. Dashboard by <a
+                    href="https://colorlib.com/wp/">Colorlib</a>.
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="text-md-right footer-links d-none d-sm-block">
+                    <a href="javascript: void(0);">About</a>
+                    <a href="javascript: void(0);">Support</a>
+                    <a href="javascript: void(0);">Contact Us</a>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <!-- jQuery -->
-    <script src="<?= base_url()?>assets/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="<?= base_url()?>assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- FastClick -->
-    <script src="<?= base_url()?>assets/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="<?= base_url()?>assets/nprogress/nprogress.js"></script>
-    <!-- bootstrap-progressbar -->
-    <script src="<?= base_url()?>assets/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-    
-    <!-- Custom Theme Scripts -->
-    <script src="<?= base_url()?>build/js/custom.min.js"></script>
-  </body>
-</html>
+</div>
+</div>
