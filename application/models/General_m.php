@@ -10,6 +10,12 @@ class General_m extends CI_Model
     {
         $this->db->insert($table, $data);
     }
+
+    public function editData($table, $data, $id)
+    {
+        $this->db->where('id', $id);
+        $this->db->update($table, $data);
+    }
 }
 
 
