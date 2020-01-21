@@ -24,7 +24,7 @@
                             <td>
                             <?= '<a href=# onclick="editAsosiasi(\'' . $d->id . '\',\'' . $d->nama . '\')" class="btn btn-warning" data-toggle="modal" data-target="#editAsosiasi">Edit</a>';
                                 ?>
-                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#deleteAsosiasi">
+                            <a onclick="return confirm('Apakah data akan dihapus ?')" href="<?= base_url('asosiasi/delete/'.$d->id) ?>" class="btn btn-danger">
                                 Hapus
                             </a>
                             </td>
