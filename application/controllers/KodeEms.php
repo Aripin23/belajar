@@ -28,4 +28,15 @@ class KodeEms extends CI_Controller
         $this->general_m->insertData('ems', $data);
         redirect('KodeEms');
     }
+
+    public function edit()
+    {
+        $kode_ems = $this->input->post('kode_ems');
+        $id = $this->input->post('id');
+        $data = [
+            'kode_ems' => $kode_ems
+        ];
+        $this->general_m->editData('ems',$data, $id);
+        redirect('KodeEms');
+    }
 }

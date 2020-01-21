@@ -22,7 +22,7 @@
                             <td><?= $no++ ?></td>
                             <td><?= $d->kode_ems?></td>
                             <td>
-                            <?= '<a href=# onclick="editAsosiasi(\'' . $d->id . '\',\'' . $d->kode_ems . '\')" class="btn btn-warning" data-toggle="modal" data-target="#editAsosiasi">Edit</a>';
+                            <?= '<a href=# onclick="editEms(\'' . $d->id . '\',\'' . $d->kode_ems . '\')" class="btn btn-warning" data-toggle="modal" data-target="#editEms">Edit</a>';
                                 ?>
                             <a onclick="return confirm('Apakah data akan dihapus ?')" href="<?= base_url('asosiasi/delete/'.$d->id) ?>" class="btn btn-danger">
                                 Hapus
@@ -68,3 +68,44 @@
         </div>
     </div>
 </div>
+
+
+<!-- Modal edit-->
+<div class="modal fade" id="editEms" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit Ems</h5>
+                <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </a>
+            </div>
+            <form method="POST" action="<?= base_url('KodeEms/edit') ?>">
+            <div class="modal-body">
+                    <div class="form-group row">
+                        <label for="nama" class="col-3 col-lg-2 col-form-label text-right">Kode Ems</label>
+                        <div class="col-9 col-lg-10">
+                            <input type="hidden"  name="id" id="idEms">
+                            <input id="KodeEms" type="text" required="" name="kode_ems" data-parsley-type="KodeEms"
+                                placeholder="kode ems" class="form-control">
+                        </div>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-secondary" data-dismiss="modal">Tutup</a>
+                <button type="submit" class="btn btn-primary">Simpan</button>
+            </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+function editEms(id,KodeEms) {
+    $('#idEms').val(id);
+    $('#KodeEms').val(KodeEms);
+}
+</script>
