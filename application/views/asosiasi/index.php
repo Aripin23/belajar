@@ -21,7 +21,14 @@
                         <tr>
                             <td><?= $no++ ?></td>
                             <td><?= $d->nama?></td>
-                            <td>edit | delete</td>
+                            <td>
+                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editAsosiasi">
+                                Edit
+                            </a>
+                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#deleteAsosiasi">
+                                Hapus
+                            </a>
+                            </td>
                         </tr>
                         <?php }?>
                     </tbody>
@@ -32,7 +39,7 @@
 </div>
 
 
-<!-- Modal -->
+<!-- Modal add-->
 <div class="modal fade" id="addAsosiasi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -44,6 +51,37 @@
                 </a>
             </div>
             <form method="POST" action="<?= base_url('asosiasi/save') ?>">
+            <div class="modal-body">
+                    <div class="form-group row">
+                        <label for="nama" class="col-3 col-lg-2 col-form-label text-right">Nama</label>
+                        <div class="col-9 col-lg-10">
+                            <input id="nama" type="text" required="" name="nama" data-parsley-type="nama"
+                                placeholder="nama" class="form-control">
+                        </div>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-secondary" data-dismiss="modal">Tutup</a>
+                <button type="submit" class="btn btn-primary">Simpan</button>
+            </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal edit-->
+<div class="modal fade" id="editAsosiasi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit Asosiasi</h5>
+                <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </a>
+            </div>
+            <form method="POST" action="<?= base_url('asosiasi/edit') ?>">
             <div class="modal-body">
                     <div class="form-group row">
                         <label for="nama" class="col-3 col-lg-2 col-form-label text-right">Nama</label>
