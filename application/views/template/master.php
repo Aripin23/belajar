@@ -10,7 +10,15 @@
     <link href="<?= base_url() ?>assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
     <link rel="stylesheet" href="<?= base_url() ?>assets/libs/css/style.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+
+    <!-- Datatable -->
+    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/vendor/datatables/css/dataTables.bootstrap4.css">
+
+
+
+
     <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
+
 </head>
 
 <body>
@@ -66,6 +74,7 @@
                     <div class="row">
                         <?php $this->load->view($content) ?>
                     </div>
+
                 </div>
                 <!-- ============================================================== -->
                 <!-- footer -->
@@ -92,6 +101,16 @@
         <script src="<?= base_url() ?>assets/vendor/slimscroll/jquery.slimscroll.js"></script>
         <!-- main js -->
         <script src="<?= base_url() ?>assets/libs/js/main-js.js"></script>
+
+
+        <!-- datatable -->
+
+        <script src="<?= base_url() ?>assets/vendor/datatables/js/jquery.dataTables.min.js"></script>
+        <script src="<?= base_url() ?>assets/vendor/datatables/js/dataTables.bootstrap4.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
+        <script src="<?= base_url() ?>assets/vendor/datatables/js/buttons.bootstrap4.min.js"></script>
+        <script src="<?= base_url() ?>assets/vendor/datatables/js/data-table.js"></script>
+
 </body>
  
 </html>
