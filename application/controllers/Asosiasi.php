@@ -38,7 +38,13 @@ class Asosiasi extends CI_Controller
         $this->general_m->editData('asosiasi',$data, $id);
         redirect('asosiasi');
     }
-    
+
+    public function delete($id)
+    {
+        $this->general_m->deleteData('asosiasi', $id);
+        redirect('asosiasi');
+    }
+
 }
 
 
