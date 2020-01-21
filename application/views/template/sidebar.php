@@ -12,19 +12,23 @@
                         Menu
                     </li>
                     <li class="nav-item ">
+                        <a class="nav-link" href="<?=base_url('dashboard')?>"><i
+                                class="fab fa-fw fa-wpforms"></i>Dashboard</a>
+                    </li>
+                    <li class="nav-item ">
                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
                             data-target="#submenu-1" aria-controls="submenu-1"><i
-                                class="fab fa-fw fa-wpforms"></i>Forms</a>
+                                class="fab fa-fw fa-wpforms"></i>Data Master</a>
                         <div id="submenu-1" class="collapse submenu" style="">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="form-elements.html">Form Elements</a>
+                                    <a class="nav-link" href="<?= base_url('asosiasi')?>">Asosiasi</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="form-validation.html">Parsely Validations</a>
+                                    <a class="nav-link" href="<?= base_url('ras')?>">Ras</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="multiselect.html">Multiselect</a>
+                                    <a class="nav-link" href="<?= base_url('kodeEms')?>">Kode Ems</a>
                                 </li>
                             </ul>
                         </div>
