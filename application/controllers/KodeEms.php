@@ -39,4 +39,10 @@ class KodeEms extends CI_Controller
         $this->general_m->editData('ems',$data, $id);
         redirect('KodeEms');
     }
+
+    public function delete($id)
+    {
+        $this->general_m->deleteData('ems', $id);
+        redirect('KodeEms');
+    }
 }

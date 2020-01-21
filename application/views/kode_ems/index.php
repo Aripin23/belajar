@@ -24,7 +24,7 @@
                             <td>
                             <?= '<a href=# onclick="editEms(\'' . $d->id . '\',\'' . $d->kode_ems . '\')" class="btn btn-warning" data-toggle="modal" data-target="#editEms">Edit</a>';
                                 ?>
-                            <a onclick="return confirm('Apakah data akan dihapus ?')" href="<?= base_url('asosiasi/delete/'.$d->id) ?>" class="btn btn-danger">
+                            <a onclick="return confirm('Apakah data akan dihapus ?')" href="<?= base_url('KodeEms/delete/'.$d->id) ?>" class="btn btn-danger">
                                 Hapus
                             </a>
                             </td>
