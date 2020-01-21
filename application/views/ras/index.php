@@ -36,3 +36,35 @@
         </div>
     </div>
 </div>
+
+
+<!-- Modal add-->
+<div class="modal fade" id="addRas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Ras</h5>
+                <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </a>
+            </div>
+            <form method="POST" action="<?= base_url('ras/save') ?>">
+            <div class="modal-body">
+                    <div class="form-group row">
+                        <label for="nama_ras" class="col-3 col-lg-2 col-form-label text-right">Nama Ras</label>
+                        <div class="col-9 col-lg-10">
+                            <input id="nama_ras" type="text" required="" name="nama_ras" data-parsley-type="nama_ras"
+                                placeholder="nama ras" class="form-control">
+                        </div>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-secondary" data-dismiss="modal">Tutup</a>
+                <button type="submit" class="btn btn-primary">Simpan</button>
+            </div>
+            </form>
+
+        </div>
+    </div>
+</div>

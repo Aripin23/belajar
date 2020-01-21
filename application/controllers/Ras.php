@@ -18,5 +18,17 @@ class Ras extends CI_Controller
         $data['data'] = $this->general_m->getData('ras');
         $this->load->view('template/master',$data);
     }
+
+    public function save()
+    {
+        $nama = $this->input->post('nama_ras');
+        $data = [
+            'nama_ras' => $nama
+        ];
+        $this->general_m->insertData('ras', $data);
+        redirect('ras');
+
+        
+    }
 }
 
