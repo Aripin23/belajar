@@ -26,9 +26,18 @@ class Ras extends CI_Controller
             'nama_ras' => $nama
         ];
         $this->general_m->insertData('ras', $data);
-        redirect('ras');
+        redirect('ras'); 
+    }
 
-        
+    public function edit()
+    {
+        $nama = $this->input->post('nama_ras');
+        $id = $this->input->post('id');
+        $data = [
+            'nama_ras' => $nama
+        ];
+        $this->general_m->editData('ras', $data,$id);
+        redirect('ras');   
     }
 }
 
