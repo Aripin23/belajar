@@ -15,7 +15,7 @@
                         <?php $no=1; foreach($data as $d ) {?>
                             <tr>
                                 <td><?= $no++ ?></td>
-                                <td>System Architect</td>
+                                <td><?= $d->nama?></td>
                                 <td>edit | delete</td>
                             </tr>
                         <?php }?>
