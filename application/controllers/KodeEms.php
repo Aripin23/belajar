@@ -18,4 +18,14 @@ class KodeEms extends CI_Controller
         $data['data'] = $this->general_m->getData('ems');
         $this->load->view('template/master',$data);
     }
+
+    public function save()
+    {
+        $kode_ems = $this->input->post('kode_ems');
+        $data = [
+            'kode_ems' => $kode_ems
+        ];
+        $this->general_m->insertData('ems', $data);
+        redirect('KodeEms');
+    }
 }
