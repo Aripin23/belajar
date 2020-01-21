@@ -17,7 +17,16 @@ class Asosiasi extends CI_Controller
         $data['content']="asosiasi/index";
         $data['data'] = $this->general_m->getData('asosiasi');
         $this->load->view('template/master',$data);
+    }
 
+    public function save()
+    {
+        $nama = $this->input->post('nama');
+        $data = [
+            'nama' => $nama
+        ];
+        $this->general_m->insertData('asosiasi', $data);
+        redirect('asosiasi');
     }
 }
 

@@ -3,7 +3,7 @@
         <div class="card-header">
             <h5>Basic Table</h5>
             <a href="#" class="btn btn-primary float-right" data-toggle="modal" data-target="#addAsosiasi">
-                Launch demo modal
+                Tambah asosiasi
             </a>
         </div>
         <div class="card-body">
@@ -43,21 +43,22 @@
                     <span aria-hidden="true">&times;</span>
                 </a>
             </div>
+            <form method="POST" action="<?= base_url('asosiasi/save') ?>">
             <div class="modal-body">
-                <form>
                     <div class="form-group row">
                         <label for="nama" class="col-3 col-lg-2 col-form-label text-right">Nama</label>
                         <div class="col-9 col-lg-10">
-                            <input id="nama" type="text" required="" data-parsley-type="nama"
+                            <input id="nama" type="text" required="" name="nama" data-parsley-type="nama"
                                 placeholder="nama" class="form-control">
                         </div>
                     </div>
-                </form>
             </div>
             <div class="modal-footer">
                 <a href="#" class="btn btn-secondary" data-dismiss="modal">Tutup</a>
                 <button type="submit" class="btn btn-primary">Simpan</button>
             </div>
+            </form>
+
         </div>
     </div>
 </div>
