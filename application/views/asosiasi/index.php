@@ -22,9 +22,8 @@
                             <td><?= $no++ ?></td>
                             <td><?= $d->nama?></td>
                             <td>
-                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editAsosiasi">
-                                Edit
-                            </a>
+                            <?= '<a href=# onclick="editAsosiasi(\'' . $d->id . '\',\'' . $d->nama . '\')" class="btn btn-warning" data-toggle="modal" data-target="#editAsosiasi">Edit</a>';
+                                ?>
                             <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#deleteAsosiasi">
                                 Hapus
                             </a>
@@ -86,7 +85,8 @@
                     <div class="form-group row">
                         <label for="nama" class="col-3 col-lg-2 col-form-label text-right">Nama</label>
                         <div class="col-9 col-lg-10">
-                            <input id="nama" type="text" required="" name="nama" data-parsley-type="nama"
+                            <input type="hidden"  name="id" id="idAsosiasi">
+                            <input id="namaAsosiasi" type="text" required="" name="nama" data-parsley-type="nama"
                                 placeholder="nama" class="form-control">
                         </div>
                     </div>
@@ -100,3 +100,10 @@
         </div>
     </div>
 </div>
+
+<script>
+function editAsosiasi(id,nama) {
+    $('#idAsosiasi').val(id);
+    $('#namaAsosiasi').val(nama);
+}
+</script>
