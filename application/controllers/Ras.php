@@ -39,5 +39,11 @@ class Ras extends CI_Controller
         $this->general_m->editData('ras', $data,$id);
         redirect('ras');   
     }
+
+    public function delete($id)
+    {
+        $this->general_m->deleteData('ras', $id);
+        redirect('ras');
+    }
 }
 
