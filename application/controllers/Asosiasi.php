@@ -28,6 +28,17 @@ class Asosiasi extends CI_Controller
         $this->general_m->insertData('asosiasi', $data);
         redirect('asosiasi');
     }
+    public function edit()
+    {
+        $nama = $this->input->post('nama');
+        $id = $this->input->post('id');
+        $data = [
+            'nama' => $nama
+        ];
+        $this->general_m->editData('asosiasi',$data, $id);
+        redirect('asosiasi');
+    }
+    
 }
 
 
