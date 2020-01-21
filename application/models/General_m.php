@@ -5,6 +5,11 @@ class General_m extends CI_Model
     {
         return $this->db->get($table)->result();
     }
+
+    public function insertData($table, $data)
+    {
+        $this->db->insert($table, $data);
+    }
 }
 
 
