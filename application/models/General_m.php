@@ -16,6 +16,13 @@ class General_m extends CI_Model
         $this->db->where('id', $id);
         $this->db->update($table, $data);
     }
+
+    public function deleteData($table, $id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete($table);
+        
+    }
 }
 
 
