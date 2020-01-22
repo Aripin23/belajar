@@ -40,12 +40,12 @@
 
 
 <!-- Modal add-->
-<div class="modal fade" id="addAsosiasi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="addAsosiasi" tabindex="-1" role="dialog" aria-labelledby="asosiasiModal"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Tambah Asosiasi</h5>
+                <h5 class="modal-title" id="asosiasiModal">Tambah Asosiasi</h5>
                 <a href="#" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </a>
@@ -71,12 +71,12 @@
 </div>
 
 <!-- Modal edit-->
-<div class="modal fade" id="editAsosiasi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="editAsosiasi" tabindex="-1" role="dialog" aria-labelledby="asosiasiModal"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Edit Asosiasi</h5>
+                <h5 class="modal-title" id="asosiasiModal">Edit Asosiasi</h5>
                 <a href="#" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </a>
