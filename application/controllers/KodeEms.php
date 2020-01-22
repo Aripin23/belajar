@@ -26,6 +26,9 @@ class KodeEms extends CI_Controller
             'kode_ems' => $kode_ems
         ];
         $this->general_m->insertData('ems', $data);
+        $this->session->set_flashdata('notif','<div class="alert alert-success" role="alert"> Data Berhasil ditambahkan 
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span></button></div>');
         redirect('KodeEms');
     }
 
