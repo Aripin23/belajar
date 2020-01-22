@@ -6,11 +6,10 @@
                 Tambah asosiasi
             </a>
         </div>
-        <div class="col-12">
-            <?=$this->session->flashdata('notif')?>
-        </div>
+        
         <div class="card-body">
             <div class="table-responsive">
+                <?=$this->session->flashdata('notif')?>
                 <table class="table table-striped table-bordered first">
                     <thead>
                         <tr>
