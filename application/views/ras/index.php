@@ -24,8 +24,8 @@
                             <td>
                             <?= '<a href=# onclick="editRas(\'' . $d->id . '\',\'' . $d->nama_ras . '\')" class="btn btn-warning" data-toggle="modal" data-target="#editRas">Edit</a>';
                                 ?>
-                            <a onclick="return confirm('Apakah data akan dihapus ?')" href="<?= base_url('asosiasi/delete/'.$d->id) ?>" class="btn btn-danger">
-                                Hapus
+                            <a onclick="return confirm('Apakah data akan dihapus ?')" href="<?= base_url('ras/delete/'.$d->id) ?>" type="button" class="btn btn-danger"><i class="fas fa-trash pr-2" aria-hidden="true"></i>
+                            Hapus
                             </a>
                             </td>
                         </tr>
