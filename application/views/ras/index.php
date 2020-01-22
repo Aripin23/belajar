@@ -22,7 +22,7 @@
                             <td><?= $no++ ?></td>
                             <td><?= $d->nama_ras?></td>
                             <td>
-                            <?= '<a href=# onclick="editRas(\'' . $d->id . '\',\'' . $d->nama_ras . '\')" class="btn btn-warning" data-toggle="modal" data-target="#editRas">Edit</a>';
+                            <?= '<a href=# onclick="editRas(\'' . $d->id . '\',\'' . $d->nama_ras . '\')" class="btn btn-warning" data-toggle="modal" data-target="#editRas"><i class="fas fa-pencil-alt pr-2" aria-hidden="true"></i>Edit</a>';
                                 ?>
                             <a onclick="return confirm('Apakah data akan dihapus ?')" href="<?= base_url('ras/delete/'.$d->id) ?>" type="button" class="btn btn-danger"><i class="fas fa-trash pr-2" aria-hidden="true"></i>
                             Hapus
