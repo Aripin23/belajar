@@ -6,6 +6,9 @@
                 Tambah Ras
             </a>
         </div>
+        <div class="col-12">
+            <?=$this->session->flashdata('notif')?>
+        </div>
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-striped table-bordered first">
