@@ -39,12 +39,12 @@
 
 
 <!-- Modal add-->
-<div class="modal fade" id="addRas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="addRas" tabindex="-1" role="dialog" aria-labelledby="rasModal"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Tambah Ras</h5>
+                <h5 class="modal-title" id="rasModal">Tambah Ras</h5>
                 <a href="#" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </a>
@@ -70,12 +70,12 @@
 </div>
 
 <!-- Modal edit-->
-<div class="modal fade" id="editRas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="editRas" tabindex="-1" role="dialog" aria-labelledby="rasModal"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Edit Ras</h5>
+                <h5 class="modal-title" id="rasModal">Edit Ras</h5>
                 <a href="#" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </a>
