@@ -39,12 +39,12 @@
 
 
 <!-- Modal add-->
-<div class="modal fade" id="addEms" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="addEms" tabindex="-1" role="dialog" aria-labelledby="emsModal"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Tambah Ems Kode</h5>
+                <h5 class="modal-title" id="emsModal">Tambah Ems Kode</h5>
                 <a href="#" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </a>
@@ -71,12 +71,12 @@
 
 
 <!-- Modal edit-->
-<div class="modal fade" id="editEms" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="editEms" tabindex="-1" role="dialog" aria-labelledby="emsModal"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Edit Ems</h5>
+                <h5 class="modal-title" id="emsModal">Edit Ems</h5>
                 <a href="#" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </a>
