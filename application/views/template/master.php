@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
- 
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -12,13 +12,19 @@
     <link rel="stylesheet" href="<?= base_url() ?>assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
 
     <!-- Datatable -->
-    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/vendor/datatables/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" type="text/css"
+        href="<?= base_url() ?>assets/vendor/datatables/css/dataTables.bootstrap4.css">
 
 
 
 
     <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
-
+    <style>
+    .borderless td,
+    .borderless th {
+        border: none;
+    }
+    </style>
 </head>
 
 <body>
@@ -56,11 +62,12 @@
                                 <div class="page-breadcrumb">
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link"><?= $breadcumb1 ?></a></li>
+                                            <li class="breadcrumb-item"><a href="#"
+                                                    class="breadcrumb-link"><?= $breadcumb1 ?></a></li>
                                             <?php if($breadcumb2!=''){ ?>
-                                                <li class="breadcrumb-item active" aria-current="page">
-                                                    <?= $breadcumb2 ?>
-                                                </li>
+                                            <li class="breadcrumb-item active" aria-current="page">
+                                                <?= $breadcumb2 ?>
+                                            </li>
                                             <?php } ?>
                                         </ol>
                                     </nav>
@@ -79,7 +86,7 @@
                 <!-- ============================================================== -->
                 <!-- footer -->
                 <!-- ============================================================== -->
-               <?php $this->load->view("template/footer");?>
+                <?php $this->load->view("template/footer");?>
                 <!-- ============================================================== -->
                 <!-- end footer -->
                 <!-- ============================================================== -->
@@ -89,31 +96,31 @@
             <!-- ============================================================== -->
         </div>
     </div>
-        <!-- ============================================================== -->
-        <!-- end main wrapper  -->
-        <!-- ============================================================== -->
-        <!-- Optional JavaScript -->
+    <!-- ============================================================== -->
+    <!-- end main wrapper  -->
+    <!-- ============================================================== -->
+    <!-- Optional JavaScript -->
 
-        <!-- bootstap bundle js -->
+    <!-- bootstap bundle js -->
 
     <!-- jquery 3.3.1 -->
     <script src="<?= base_url() ?>assets/vendor/jquery/jquery-3.3.1.min.js"></script>
 
-        <script src="<?= base_url() ?>assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
-        <!-- slimscroll js -->
-        <script src="<?= base_url() ?>assets/vendor/slimscroll/jquery.slimscroll.js"></script>
-        <!-- main js -->
-        <script src="<?= base_url() ?>assets/libs/js/main-js.js"></script>
+    <script src="<?= base_url() ?>assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- slimscroll js -->
+    <script src="<?= base_url() ?>assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+    <!-- main js -->
+    <script src="<?= base_url() ?>assets/libs/js/main-js.js"></script>
 
 
-        <!-- datatable -->
+    <!-- datatable -->
 
-        <script src="<?= base_url() ?>assets/vendor/datatables/js/jquery.dataTables.min.js"></script>
-        <script src="<?= base_url() ?>assets/vendor/datatables/js/dataTables.bootstrap4.min.js"></script>
-        <script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
-        <script src="<?= base_url() ?>assets/vendor/datatables/js/buttons.bootstrap4.min.js"></script>
-        <script src="<?= base_url() ?>assets/vendor/datatables/js/data-table.js"></script>
+    <script src="<?= base_url() ?>assets/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="<?= base_url() ?>assets/vendor/datatables/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
+    <script src="<?= base_url() ?>assets/vendor/datatables/js/buttons.bootstrap4.min.js"></script>
+    <script src="<?= base_url() ?>assets/vendor/datatables/js/data-table.js"></script>
 
 </body>
- 
+
 </html>

@@ -13,12 +13,12 @@
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="<?=base_url('dashboard')?>"><i
-                                class="fab fa-fw fa-wpforms"></i>Dashboard</a>
+                                class="fa fa-home"></i>Dashboard</a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
                             data-target="#submenu-1" aria-controls="submenu-1"><i
-                                class="fab fa-fw fa-wpforms"></i>Data Master</a>
+                                class="fas fa-sitemap"></i>Data Master</a>
                         <div id="submenu-1" class="collapse submenu" style="">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
@@ -33,6 +33,58 @@
                             </ul>
                         </div>
                     </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                            data-target="#submenu-2" aria-controls="submenu-2"><i
+                                class="fas fa-paw"></i>Hewan</a>
+                        <div id="submenu-2" class="collapse submenu" style="">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?= base_url('hewan')?>">Daftar Hewan</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?= base_url('tambahHewan')?>">Tambah Hewan</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                            data-target="#submenu-3" aria-controls="submenu-3"><i
+                                class="fa fa-user-circle"></i>Profil</a>
+                        <div id="submenu-3" class="collapse submenu" style="">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?= base_url('detailProf')?>">Detail Profil</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?= base_url('asosiasi')?>">Asosiasi</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?= base_url('regAsosiasi')?>">Registrasi Asosiasi</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                            data-target="#submenu-4" aria-controls="submenu-4"><i
+                                class="fas fa-clipboard-list"></i>Catree</a>
+                        <div id="submenu-4" class="collapse submenu" style="">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?= base_url('daftarPedigree')?>">Daftar Pedigree</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?= base_url('tambahPedigree')?>">Tambah Pedigree</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+
+
                 </ul>
             </div>
         </nav>
