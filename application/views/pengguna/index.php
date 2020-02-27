@@ -15,11 +15,9 @@
                         <tr>
                             <th>No</th>
                             <th>Nama</th>
-                            <th>Alamat</th>
-                            <th>Username</th>
-                            <th>Password</th>
                             <th>Email</th>
-                            <th>Tgl_Lahir</th>
+                            <th>Password</th>
+                            <th>Gambar</th>
                             <th>Role</th>
                             <th>Aksi</th>
                         </tr>
@@ -29,14 +27,12 @@
                         <tr>
                             <td><?= $no++ ?></td>
                             <td><?= $d->nama?></td>
-                            <td><?= $d->alamat?></td>
-                            <td><?= $d->username?></td>
-                            <td><?= $d->password?></td>
                             <td><?= $d->email?></td>
-                            <td><?= $d->tgl_lahir?></td>
+                            <td><?= $d->password?></td>
+                            <td><?= $d->gambar?></td>
                             <td><?= $d->role?></td>
                             <td>
-                            <?= '<a href=# onclick="editAsosiasi(\'' . $d->id . '\',\'' . $d->nama . '\')" class="btn btn-warning" data-toggle="modal" data-target="#editPengguna"><i class="fas fa-pencil-alt pr-2" aria-hidden="true"></i>Edit</a>';
+                            <?= '<a href=# onclick="editPengguna(\'' . $d->id . '\',\'' . $d->nama . '\')" class="btn btn-warning" data-toggle="modal" data-target="#editPengguna"><i class="fas fa-pencil-alt pr-2" aria-hidden="true"></i>Edit</a>';
                                 ?>
 
                             <a onclick="return confirm('Apakah data akan dihapus ?')" href="<?= base_url('pengguna/delete/'.$d->id) ?>" type="button" class="btn btn-danger"><i class="fas fa-trash pr-2" aria-hidden="true"></i>
@@ -74,17 +70,10 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="alamat" class="col-3 col-lg-2 col-form-label text-right">Alamat</label>
+                        <label for="email" class="col-3 col-lg-2 col-form-label text-right">Email</label>
                         <div class="col-9 col-lg-10">
-                            <input id="alamat" type="text" required="" name="alamat" data-parsley-type="alamat"
-                                placeholder="Alamat" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="username" class="col-3 col-lg-2 col-form-label text-right">Username</label>
-                        <div class="col-9 col-lg-10">
-                            <input id="username" type="text" required="" name="username" data-parsley-type="username"
-                                placeholder="Username" class="form-control">
+                            <input id="email" type="email" required="" name="email" data-parsley-type="email"
+                                placeholder="Email" class="form-control">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -94,26 +83,27 @@
                                 placeholder="Password" class="form-control">
                         </div>
                     </div>
-                    <div class="form-group row">
-                        <label for="email" class="col-3 col-lg-2 col-form-label text-right">Email</label>
+                    <!-- <div class="form-group row">
+                        <label for="role" class="col-3 col-lg-2 col-form-label text-right">Gambar</label>
                         <div class="col-9 col-lg-10">
-                            <input id="email" type="email" required="" name="email" data-parsley-type="email"
-                                placeholder="Email" class="form-control">
+                            <input id="gambar" type="" required="" name="gambar" data-parsley-type="gambar"
+                                placeholder="default.jpg" class="form-control">
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="tgl_lahir" class="col-3 col-lg-2 col-form-label text-right">Tgl_Lahir</label>
-                        <div class="col-9 col-lg-10">
-                            <input id="tgl_lahir" type="date" required="" name="tgl_lahir" data-parsley-type="tgl_lahir"
-                                placeholder="Tgl_lahir" class="form-control">
-                        </div>
-                    </div>
+                    </div> -->
                     <div class="form-group row">
                         <label for="role" class="col-3 col-lg-2 col-form-label text-right">Role</label>
-                        <div class="col-9 col-lg-10">
+                        <!-- <div class="col-9 col-lg-10">
                             <input id="role" type="" required="" name="role" data-parsley-type="role"
-                                placeholder="Role" class="form-control">
-                        </div>
+                                placeholder="Role" class="form-control"> -->
+                            <div class="col-9 col-lg-10">
+                                <select id="role" required="" name="role" data-parsley-type="role" class="form-control">
+                                    <option value="" disabled selected>Pilih hak akses</option>
+                                    <option value="1">superadmin</option>
+                                    <option value="2">cattry</option>
+                                    <option value="3">adminasosiasi</option>
+                                    <option value="4">standar</option>
+                                </select>
+                            </div>
                     </div>
             </div>
             <div class="modal-footer">
@@ -125,5 +115,51 @@
         </div>
     </div>
 </div>
+
+<!-- Modal edit-->
+<div class="modal fade" id="editPengguna" tabindex="-1" role="dialog" aria-labelledby="penggunaModal"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="penggunaModal">Edit Pengguna</h5>
+                <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </a>
+            </div>
+            <form method="POST" action="<?= base_url('pengguna/edit') ?>">
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <label for="nama" class="col-3 col-lg-2 col-form-label text-right">Nama</label>
+                        <div class="col-9 col-lg-10">
+                            <input type="hidden"  name="id" id="idPengguna">
+                            <input id="namaPengguna" type="text" required="" name="nama" data-parsley-type="nama"
+                             class="form-control">
+                        </div>
+                        <label for="email" class="col-3 col-lg-2 col-form-label text-right">Email</label>
+                        <div class="col-9 col-lg-10">
+                            <input id="emailPengguna" type="text" required="" name="email" data-parsley-type="email"
+                             class="form-control">
+                        </div>
+                    </div>
+                </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-secondary" data-dismiss="modal">Tutup</a>
+                <button type="submit" class="btn btn-primary">Simpan</button>
+            </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<script>
+function editPengguna(id,nama,email) {
+    $('#idPengguna').val(id);
+    $('#namaPengguna').val(nama);
+    $('#emailPengguna').val(email);
+
+}
+</script>
 
 
