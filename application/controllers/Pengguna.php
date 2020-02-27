@@ -19,23 +19,33 @@ class Pengguna extends CI_Controller
         $this->load->view('template/master',$data);
     }
 
+
+    public function profile()
+    {
+        $data['title'] = 'Profile'; 
+        $data['breadcumb1'] = 'Profile'; 
+        $data['breadcumb2'] = 'Data'; 
+        $data['content']="pengguna/profile";
+        $data['pengguna'] = $this->db->get_where('pengguna', ['email' =>
+		$this->session->userdata('email')])->row_array();
+        $this->load->view('template/master',$data);
+    }
+
+    
     public function save()
     {
         $nama = $this->input->post('nama');
-        $alamat = $this->input->post('alamat');
-        $username = $this->input->post('username');
-        $password = md5($this->input->post('password'));
         $email = $this->input->post('email');
-        $tgl_lahir = $this->input->post('tgl_lahir');
+        $password = md5($this->input->post('password'));
+        $gambar = $this($this->input->post('gambar'));
         $role = $this->input->post('role');
+
         
         $data = [
             'nama' => $nama,
-            'alamat' => $alamat,
-            'username' => $username,
-            'password' => $password,
             'email' => $email,
-            'tgl_lahir' => $tgl_lahir,
+            'password' => $password,
+            'gambar' => $gambar,
             'role' => $role            
         ];
         $this->general_m->insertData('pengguna', $data);
@@ -45,10 +55,23 @@ class Pengguna extends CI_Controller
         redirect('pengguna');
     }
 
-    
+    public function edit()
+    {
+        $nama = $this->input->post('nama');
+        $email = $this->input->post('email');
+        $id = $this->input->post('id');
+        $data = [
+            'nama' => $nama,
+            'email' => $email
+        ];
+        $this->general_m->editData('pengguna',$data, $id);
+        redirect('pengguna');
+    }
 
-
-
-
+    public function delete($id)
+    {
+        $this->general_m->deleteData('pengguna', $id);
+        redirect('pengguna');
+    }
 
 }
