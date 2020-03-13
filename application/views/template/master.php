@@ -18,7 +18,7 @@
 
 
 
-    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
+    <title>Exopets</title>
     <style>
     .borderless td,
     .borderless th {
