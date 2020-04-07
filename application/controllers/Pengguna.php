@@ -22,8 +22,8 @@ class Pengguna extends CI_Controller
 
     public function profile()
     {
-        $data['title'] = 'Profile'; 
-        $data['breadcumb1'] = 'Profile'; 
+        $data['title'] = 'Profil'; 
+        $data['breadcumb1'] = 'Profil'; 
         $data['breadcumb2'] = 'Data'; 
         $data['content']="pengguna/profile";
         $data['pengguna'] = $this->db->get_where('pengguna', ['email' =>
